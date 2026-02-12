@@ -152,8 +152,19 @@ h1 {
   font-size: clamp(2.4rem, 8.8vw, 6.7rem);
   letter-spacing: 0.005em;
   font-weight: 900;
-  max-width: 12ch;
+  max-width: 15ch;
   line-height: 0.97;
+}
+
+.h1-aside {
+  display: inline-block;
+  margin: 0 0.16em;
+  font-size: 0.38em;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--wine-plum);
+  text-transform: none;
+  vertical-align: 0.12em;
 }
 
 .lead {
