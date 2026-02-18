@@ -70,6 +70,9 @@ p {
       rgba(87, 45, 45, 0.12) calc(100% - 1px)
     );
   background-size: 84px 84px, 84px 84px;
+  background-position:
+    0 calc(var(--texture-shift, 0px)),
+    0 calc(var(--texture-shift, 0px) * 0.55);
   z-index: -1;
   pointer-events: none;
 }
@@ -77,7 +80,7 @@ p {
 .hero {
   min-height: auto;
   display: block;
-  padding-bottom: 1rem;
+  padding-bottom: 0.4rem;
   position: relative;
   text-align: left;
 }
@@ -105,7 +108,7 @@ p {
 }
 
 .hero-content {
-  padding: 1.1rem 0 0.75rem;
+  padding: 1.45rem 0 0.55rem;
   animation: fade-up 0.9s ease-out both;
   max-width: none;
   text-align: left;
@@ -156,22 +159,59 @@ h1 {
   line-height: 0.97;
 }
 
-.h1-aside {
-  display: inline-block;
-  margin: 0 0.16em;
-  font-size: 0.38em;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--wine-plum);
+.newsday-headline {
+  margin: 0 0 1rem;
+  max-width: 17ch;
+  font-size: clamp(2.5rem, 8.6vw, 6.2rem);
+  line-height: 0.95;
   text-transform: none;
-  vertical-align: 0.12em;
+}
+
+.newsday-word {
+  display: inline;
+  color: var(--wine-plum);
+}
+
+.weekday-line {
+  margin: 0.2rem 0 0;
+  font-family: "Founders Grotesk Medium", "Founders Grotesk", sans-serif;
+  font-size: clamp(0.95rem, 1.9vw, 1.14rem);
+  line-height: 1.3;
+  color: var(--wine-plum);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.weekday-line-2 {
+  margin-top: 0.08rem;
+  opacity: 0.9;
+}
+
+.weekday-line.is-swapping {
+  opacity: 0.35;
+  transform: translateY(4px);
 }
 
 .lead {
   color: var(--espresso);
   max-width: 52ch;
-  margin-top: 1rem;
+  margin-top: 0.7rem;
   font-size: clamp(1rem, 1.8vw, 1.22rem);
+}
+
+.newsday-headline.is-changing {
+  animation: day-swap 300ms ease;
+}
+
+@keyframes day-swap {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section-lead {
@@ -182,7 +222,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.5rem;
+  margin-top: 0.85rem;
 }
 
 .btn {
@@ -218,13 +258,48 @@ h1 {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 2.4rem 0;
 }
 
 .section h2 {
   font-size: clamp(1.7rem, 5vw, 3rem);
   line-height: 1.05;
   max-width: 18ch;
+}
+
+.mid-logo-section {
+  padding-top: 0.4rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
+}
+
+.mid-logo-wrap {
+  display: inline-block;
+  background: var(--ivory-mist);
+  border: 2px solid var(--line);
+  padding: clamp(0.55rem, 1.6vw, 0.9rem);
+  box-shadow: 10px 10px 0 var(--wine-plum);
+  animation: logo-float 4.6s ease-in-out infinite;
+}
+
+.mid-logo {
+  width: min(520px, 78vw);
+  height: auto;
+  display: block;
+}
+
+@keyframes logo-float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .grid {
@@ -358,7 +433,7 @@ h1 {
 
 .contact-grid {
   margin-top: 1.1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .contact-grid p {
@@ -595,6 +670,50 @@ h1 {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.contact-section .reveal-item {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  transition-delay: 0ms;
+}
+
+.contact-section.is-visible .reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-section.is-visible .contact-grid p.reveal-item:nth-child(1) {
+  transition-delay: 70ms;
+}
+
+.contact-section.is-visible .contact-grid p.reveal-item:nth-child(2) {
+  transition-delay: 140ms;
+}
+
+.contact-section.is-visible .contact-grid p.reveal-item:nth-child(3) {
+  transition-delay: 210ms;
+}
+
+.contact-section.is-visible .signup-block.reveal-item {
+  transition-delay: 290ms;
+}
+
+.contact-section.is-visible .hero-actions.reveal-item {
+  transition-delay: 360ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mid-logo-wrap {
+    animation: none;
+  }
+
+  .contact-section .reveal-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 900px) {
