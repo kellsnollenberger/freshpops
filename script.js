@@ -113,8 +113,8 @@ if (weekdayLineEl && weekdayLine2El) {
       weekdayLine2El.textContent = nextLine();
       weekdayLineEl.classList.remove("is-swapping");
       weekdayLine2El.classList.remove("is-swapping");
-    }, 220);
-  }, 3600);
+    }, 260);
+  }, 2400);
 }
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
