@@ -3,20 +3,6 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
-
-document.querySelectorAll(".reveal").forEach((section) => observer.observe(section));
-
 function restyleMailerLiteForm() {
   const root = document.querySelector("#signup");
   if (!root) return;
@@ -66,13 +52,7 @@ if (newsdayWordEl) {
   setInterval(() => {
     dayIndex = (dayIndex + 1) % days.length;
     newsdayWordEl.textContent = days[dayIndex];
-    const heroTaglineEl = document.querySelector("#hero-tagline");
-    if (heroTaglineEl) {
-      heroTaglineEl.classList.remove("is-changing");
-      void heroTaglineEl.offsetWidth;
-      heroTaglineEl.classList.add("is-changing");
-    }
-  }, 2500);
+  }, 5600);
 }
 
 const weekdayLineEl = document.querySelector("#weekday-line");
@@ -89,51 +69,8 @@ if (weekdayLineEl && weekdayLine2El) {
     "We peak on Tuesdays.",
     "Come as you are. Come any day you are.",
   ];
-  let pool = [...options].sort(() => Math.random() - 0.5);
-  let pointer = 0;
 
-  const nextLine = () => {
-    const line = pool[pointer];
-    pointer += 1;
-    if (pointer >= pool.length) {
-      pool = [...options].sort(() => Math.random() - 0.5);
-      pointer = 0;
-    }
-    return line;
-  };
-
-  weekdayLineEl.textContent = nextLine();
-  weekdayLine2El.textContent = nextLine();
-
-  setInterval(() => {
-    weekdayLineEl.classList.add("is-swapping");
-    weekdayLine2El.classList.add("is-swapping");
-    window.setTimeout(() => {
-      weekdayLineEl.textContent = nextLine();
-      weekdayLine2El.textContent = nextLine();
-      weekdayLineEl.classList.remove("is-swapping");
-      weekdayLine2El.classList.remove("is-swapping");
-    }, 260);
-  }, 2400);
-}
-
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-if (!reduceMotion) {
-  let ticking = false;
-  const updateTextureParallax = () => {
-    const shift = Math.min(window.scrollY * 0.32, 220);
-    document.documentElement.style.setProperty("--texture-shift", `${shift}px`);
-    ticking = false;
-  };
-
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateTextureParallax);
-        ticking = true;
-      }
-    },
-    { passive: true }
-  );
+  const shuffled = [...options].sort(() => Math.random() - 0.5);
+  weekdayLineEl.textContent = shuffled[0];
+  weekdayLine2El.textContent = shuffled[1];
 }

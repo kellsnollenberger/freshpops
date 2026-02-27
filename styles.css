@@ -1,5 +1,68 @@
+@font-face {
+  font-family: "Founders Grotesk";
+  src: url("assets/Fresh Pops Final Files/Fonts/Founders Grotesk/FoundersGrotesk-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Light";
+  src: url("assets/Fresh Pops Final Files/Fonts/Founders Grotesk/FoundersGrotesk-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk";
+  src: url("assets/Fresh Pops Final Files/Fonts/Founders Grotesk/FoundersGrotesk-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk";
+  src: url("assets/Fresh Pops Final Files/Fonts/Founders Grotesk/FoundersGrotesk-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Medium";
+  src: url("assets/Fresh Pops Final Files/Fonts/Founders Grotesk/FoundersGrotesk-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk";
+  src: url("assets/Fresh Pops Final Files/Fonts/Founders Grotesk/FoundersGrotesk-Semibold.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk";
+  src: url("assets/Fresh Pops Final Files/Fonts/Founders Grotesk/FoundersGrotesk-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --bric-red: #b32e26;
+  --bric-red: #b33e26;
   --ivory-mist: #fffaec;
   --wine-plum: #753742;
   --espresso: #572d2d;
@@ -70,9 +133,7 @@ p {
       rgba(87, 45, 45, 0.12) calc(100% - 1px)
     );
   background-size: 84px 84px, 84px 84px;
-  background-position:
-    0 calc(var(--texture-shift, 0px)),
-    0 calc(var(--texture-shift, 0px) * 0.55);
+  background-position: 0 0, 0 0;
   z-index: -1;
   pointer-events: none;
 }
@@ -109,7 +170,6 @@ p {
 
 .hero-content {
   padding: 1.45rem 0 0.55rem;
-  animation: fade-up 0.9s ease-out both;
   max-width: none;
   text-align: left;
 }
@@ -168,28 +228,21 @@ h1 {
 }
 
 .newsday-word {
-  display: inline-block;
+  display: inline;
   color: var(--wine-plum);
-  animation: newsday-pop 1.4s ease-in-out infinite;
 }
 
 .weekday-line {
-  margin: 0.2rem 0 0;
+  margin: 0.18rem 0 0;
   font-family: "Founders Grotesk Medium", "Founders Grotesk", sans-serif;
   font-size: clamp(0.95rem, 1.9vw, 1.14rem);
   line-height: 1.3;
   color: var(--wine-plum);
-  transition: opacity 0.42s ease, transform 0.42s ease;
+  opacity: 0.95;
 }
 
 .weekday-line-2 {
-  margin-top: 0.08rem;
-  opacity: 0.9;
-}
-
-.weekday-line.is-swapping {
-  opacity: 0;
-  transform: translateY(9px);
+  margin-top: 0.06rem;
 }
 
 .lead {
@@ -197,39 +250,6 @@ h1 {
   max-width: 52ch;
   margin-top: 0.7rem;
   font-size: clamp(1rem, 1.8vw, 1.22rem);
-}
-
-.newsday-headline.is-changing {
-  animation: day-swap 300ms ease;
-}
-
-@keyframes day-swap {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes newsday-pop {
-  0% {
-    transform: translateY(0) scale(1);
-    color: var(--wine-plum);
-  }
-
-  50% {
-    transform: translateY(-2px) scale(1.03);
-    color: var(--bric-red);
-  }
-
-  100% {
-    transform: translateY(0) scale(1);
-    color: var(--wine-plum);
-  }
 }
 
 .section-lead {
@@ -265,10 +285,6 @@ h1 {
   border-color: var(--accent);
 }
 
-.hero-actions .btn-solid {
-  animation: cta-pulse 2.8s ease-in-out infinite;
-}
-
 .btn-outline {
   border-color: var(--espresso);
   color: var(--espresso);
@@ -277,21 +293,6 @@ h1 {
 
 .btn:hover {
   transform: translateY(-2px);
-}
-
-@keyframes cta-pulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(179, 46, 38, 0);
-  }
-
-  35% {
-    box-shadow: 0 0 0 10px rgba(179, 46, 38, 0.22);
-  }
-
-  55% {
-    box-shadow: 0 0 0 0 rgba(179, 46, 38, 0);
-  }
 }
 
 .section {
@@ -312,31 +313,16 @@ h1 {
 
 .mid-logo-wrap {
   display: inline-block;
-  background: var(--ivory-mist);
-  border: 2px solid var(--line);
-  padding: clamp(0.55rem, 1.6vw, 0.9rem);
-  box-shadow: 10px 10px 0 var(--wine-plum);
-  animation: logo-float 4.6s ease-in-out infinite;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
 .mid-logo {
-  width: min(520px, 78vw);
+  width: min(640px, 84vw);
   height: auto;
   display: block;
-}
-
-@keyframes logo-float {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .grid {
@@ -699,62 +685,13 @@ h1 {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
-}
-
-.reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 .contact-section .reveal-item {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
-  transition-delay: 0ms;
-}
-
-.contact-section.is-visible .reveal-item {
   opacity: 1;
-  transform: translateY(0);
-}
-
-.contact-section.is-visible .contact-grid p.reveal-item:nth-child(1) {
-  transition-delay: 70ms;
-}
-
-.contact-section.is-visible .contact-grid p.reveal-item:nth-child(2) {
-  transition-delay: 140ms;
-}
-
-.contact-section.is-visible .contact-grid p.reveal-item:nth-child(3) {
-  transition-delay: 210ms;
-}
-
-.contact-section.is-visible .signup-block.reveal-item {
-  transition-delay: 290ms;
-}
-
-.contact-section.is-visible .hero-actions.reveal-item {
-  transition-delay: 360ms;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .mid-logo-wrap {
-    animation: none;
-  }
-
-  .hero-actions .btn-solid {
-    animation: none;
-  }
-
-  .contact-section .reveal-item {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+  transform: none;
 }
 
 @media (max-width: 900px) {
