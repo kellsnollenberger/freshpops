@@ -49,8 +49,14 @@ Posts auto-appear on:
 
 This site is Jekyll-compatible (GitHub Pages native).
 
-1. Install Ruby + Bundler (if needed).
-2. Add a `Gemfile` with `github-pages` gem or run Jekyll directly if already installed.
+1. Use Ruby `3.3.6` (see `.ruby-version`).
+2. Install Bundler and gems:
+
+```bash
+gem install bundler
+bundle install
+```
+
 3. Run:
 
 ```bash
@@ -58,6 +64,8 @@ bundle exec jekyll serve
 ```
 
 4. Open `http://127.0.0.1:4000`
+
+If you see a Ruby 2.6/ffi error on macOS, your shell is still using system Ruby. Switch to Ruby 3.x with a version manager (for example `rbenv`) before running `bundle install`.
 
 ## Deploy (GitHub Pages)
 
