@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {% assign computed_title = site.title | append: ' | Bar + Music + Restaurant, coming soon' %}
+    {% if page.title and page.title != site.title %}
+      {% assign computed_title = page.title | append: ' | ' | append: site.title %}
+    {% endif %}
+
+    {% assign computed_description = page.description | default: site.description %}
+    {% assign computed_image = page.image | default: site.social_image %}
+    {% assign og_type = 'website' %}
+    {% if page.layout == 'update' %}
+      {% assign og_type = 'article' %}
+    {% endif %}
+
+    <title>{{ computed_title }}</title>
+    <meta name="description" content="{{ computed_description | escape }}" />
+    <meta name="theme-color" content="#9e968d" />
+    <meta name="color-scheme" content="light" />
+
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/brand/favicon-32.png' | relative_url }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/brand/apple-touch-icon.png' | relative_url }}" />
+    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}" />
+
+    <meta property="og:type" content="{{ og_type }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ computed_title | escape }}" />
+    <meta property="og:description" content="{{ computed_description | escape }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:image" content="{{ computed_image | absolute_url }}" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ computed_title | escape }}" />
+    <meta name="twitter:description" content="{{ computed_description | escape }}" />
+    <meta name="twitter:image" content="{{ computed_image | absolute_url }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+
+    <script>
+      (function (w, d, e, u, f, l, n) {
+        w[f] =
+          w[f] ||
+          function () {
+            (w[f].q = w[f].q || []).push(arguments);
+          };
+        l = d.createElement(e);
+        l.async = 1;
+        l.src = u;
+        n = d.getElementsByTagName(e)[0];
+        n.parentNode.insertBefore(l, n);
+      })(window, document, "script", "https://assets.mailerlite.com/js/universal.js", "ml");
+      ml("account", "{{ site.mailerlite_account }}");
+    </script>
+
+    {% if page.noindex %}
+      <meta name="robots" content="noindex,nofollow" />
+    {% endif %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="texture" aria-hidden="true"></div>
+
+    {% unless page.hide_top_rail %}
+      <header class="top-rail" role="banner">
+        <div class="container top-rail-inner">
+          <a class="top-rail-home" href="{{ '/' | relative_url }}">Fresh Pops</a>
+          <nav aria-label="Primary" class="top-rail-nav">
+            <a href="{{ '/updates/' | relative_url }}">Updates</a>
+            <a href="{{ site.instagram_url }}" target="_blank" rel="noreferrer noopener">Instagram</a>
+            <a href="{{ '/#signup' | relative_url }}">Join Email</a>
+          </nav>
+        </div>
+      </header>
+    {% endunless %}
+
+    {{ content }}
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img
+            src="{{ site.logo_path | relative_url }}"
+            alt="{{ site.title }} logo"
+            class="footer-logo"
+            loading="lazy"
+            width="360"
+            height="74"
+          />
+          <p class="footer-legal">&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        </div>
+
+        <div class="footer-links" aria-label="Footer">
+          <a href="{{ '/updates/' | relative_url }}">Read updates</a>
+          <a href="{{ site.instagram_url }}" target="_blank" rel="noreferrer noopener">Instagram</a>
+          <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
+          <a href="{{ '/#signup' | relative_url }}">Join email list</a>
+        </div>
+      </div>
+
+      <p class="container footer-note">
+        Newsletter signup is powered by MailerLite. We only use your email for Fresh Pops updates. Unsubscribe anytime.
+      </p>
+    </footer>
+
+    <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+  </body>
+</html>

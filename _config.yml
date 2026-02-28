@@ -1,0 +1,39 @@
+title: Fresh Pops
+description: >-
+  Fresh Pops is a music-first neighborhood bar in Bed-Stuy opening soon.
+  Join the email list for build updates, opening timeline changes, and first-night news.
+url: "https://freshpops.nyc"
+baseurl: ""
+lang: en-US
+timezone: America/New_York
+instagram_url: "https://instagram.com/freshpopsnyc"
+contact_email: "info@freshpops.nyc"
+mailerlite_account: "2108060"
+mailerlite_form_id: "C0eoW1"
+social_image: "/assets/brand/social-card.png"
+logo_path: "/assets/brand/logo-horizontal.svg"
+
+markdown: kramdown
+permalink: pretty
+
+collections:
+  updates:
+    output: true
+    permalink: /updates/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: updates
+    values:
+      layout: update
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - assets/Fresh Pops Final Files
+  - README.md
+  - script.js
+  - styles.css

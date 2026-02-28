@@ -1,0 +1,32 @@
+---
+layout: default
+title: Updates
+description: Fresh Pops build updates, timeline notes, and opening progress posts.
+---
+{% assign updates_sorted = site.updates | sort: 'date' | reverse %}
+
+<main id="main" class="updates-main">
+  <section class="container updates-hero">
+    <p class="section-label">Build Log</p>
+    <h1>Fresh Pops Updates</h1>
+    <p>
+      We are not open yet. This is where we post timeline changes, build progress,
+      and when to expect real opening news.
+    </p>
+    <p class="updates-note">Newest updates first. Tap any card for details.</p>
+    <a class="btn btn-primary" href="{{ '/#signup' | relative_url }}">Join Email Updates</a>
+  </section>
+
+  <section class="container updates-list" aria-label="Updates list, newest first">
+    {% for post in updates_sorted %}
+      <article class="update-card" aria-labelledby="update-title-{{ forloop.index }}">
+        <p class="update-date">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </p>
+        <h2 id="update-title-{{ forloop.index }}"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+        <a class="btn btn-secondary update-read-link" href="{{ post.url | relative_url }}">Read update</a>
+      </article>
+    {% endfor %}
+  </section>
+</main>

@@ -1,0 +1,23 @@
+<main id="main" class="update-main">
+  <article class="container update-article">
+    <p class="update-back-link"><a href="{{ '/updates/' | relative_url }}">&larr; All updates</a></p>
+    <h1>{{ page.title }}</h1>
+    <p class="update-date">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    </p>
+
+    {% if page.excerpt %}
+      <p class="update-excerpt">{{ page.excerpt }}</p>
+    {% endif %}
+
+    <div class="update-content">
+      {{ content }}
+    </div>
+
+    <section class="update-signup-cta" aria-labelledby="update-signup-heading">
+      <h2 id="update-signup-heading">Want the next update first?</h2>
+      <p>Join the email list and we’ll send progress notes before they hit social.</p>
+      <a href="{{ '/#signup' | relative_url }}" class="btn btn-primary">Join Email Updates</a>
+    </section>
+  </article>
+</main>
