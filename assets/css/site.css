@@ -629,7 +629,18 @@ main > section:not(.hero)::before {
   max-width: 980px;
 }
 
+.update-back-link {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
 .update-back-link a {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
   text-decoration: none;
   border: 1px dashed var(--line-strong);
   color: var(--amber);
