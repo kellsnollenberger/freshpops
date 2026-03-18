@@ -792,6 +792,14 @@ main > section:not(.hero)::before {
   width: 100% !important;
 }
 
+.signup-form-wrap .ml-form-successBody,
+.signup-form-wrap .ml-form-successBody h4,
+.signup-form-wrap .ml-form-successBody p,
+.signup-form-wrap .ml-form-successBody span,
+.signup-form-wrap .ml-form-successBody div {
+  color: var(--text) !important;
+}
+
 .signup-form-wrap .ml-form-fieldRow,
 .signup-form-wrap .ml-form-checkboxRow,
 .signup-form-wrap .ml-form-recaptcha {
@@ -811,6 +819,8 @@ main > section:not(.hero)::before {
   font-family: "Space Mono", "IBM Plex Mono", monospace;
   font-size: 1.08rem;
   box-shadow: none !important;
+  -webkit-text-fill-color: var(--text) !important;
+  caret-color: var(--text) !important;
 }
 
 .signup-form-wrap input::placeholder {
