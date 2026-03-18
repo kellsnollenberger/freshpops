@@ -23,8 +23,5 @@ We have a few versions in the mix now:
 
 ![Fresh Pops sticker logo](/assets/brand/logo-sticker.png)
 
-### Hero sticker
-
-![Fresh Pops hero sticker logo](/assets/brand/logo-sticker-hero.png)
-
 We are very into these, and you will probably keep seeing them pop up as the place comes together.
+s
