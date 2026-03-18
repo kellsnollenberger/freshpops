@@ -662,6 +662,16 @@ main > section:not(.hero)::before {
   margin-top: 0.75rem;
 }
 
+.update-content img {
+  display: block;
+  width: min(100%, 760px);
+  height: auto;
+  margin-top: 0.55rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(242, 234, 216, 0.03);
+  padding: 0.9rem;
+}
+
 .update-content ul,
 .update-content ol {
   padding-left: 1.25rem;
