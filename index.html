@@ -115,6 +115,18 @@ hide_top_rail: true
       </div>
       <div class="signup-form-wrap" aria-label="Email signup form">
         <div class="ml-embedded" data-form="{{ site.mailerlite_form_id }}"></div>
+        <div class="signup-fallback" hidden>
+          <p class="signup-fallback-heading">If this signup box is acting weird on your browser, email us and we’ll add you manually.</p>
+          <a
+            class="btn btn-primary signup-fallback-btn"
+            href="mailto:{{ site.contact_email }}?subject=Join%20the%20Fresh%20Pops%20email%20list"
+          >
+            Email Us to Join the List
+          </a>
+          <p class="signup-fallback-note">
+            You can also <a href="{{ site.instagram_url }}" target="_blank" rel="noreferrer noopener">follow along on Instagram</a> while we sort it out.
+          </p>
+        </div>
       </div>
     </div>
   </section>

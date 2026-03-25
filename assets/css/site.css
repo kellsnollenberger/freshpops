@@ -527,6 +527,48 @@ main > section:not(.hero)::before {
   padding: clamp(0.95rem, 2.4vw, 1.45rem);
 }
 
+.signup-form-wrap.is-fallback-visible {
+  display: grid;
+  gap: 0;
+}
+
+.signup-fallback[hidden] {
+  display: none !important;
+}
+
+.signup-form-wrap.is-fallback-visible .ml-embedded {
+  display: none;
+}
+
+.signup-fallback {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.signup-fallback-heading,
+.signup-fallback-note {
+  margin: 0;
+  max-width: 34ch;
+}
+
+.signup-fallback-heading {
+  color: var(--text);
+  font-size: clamp(0.98rem, 1.5vw, 1.12rem);
+}
+
+.signup-fallback-note {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+}
+
+.signup-fallback-note a {
+  color: var(--amber);
+}
+
+.signup-fallback-btn {
+  width: 100%;
+}
+
 .latest-update {
   display: grid;
   gap: 1rem;

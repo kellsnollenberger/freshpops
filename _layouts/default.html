@@ -52,6 +52,13 @@
           };
         l = d.createElement(e);
         l.async = 1;
+        l.onerror = function () {
+          w.__freshPopsMailerLiteFailed = true;
+          d.documentElement.classList.add("mailerlite-failed");
+          if (w.CustomEvent) {
+            w.dispatchEvent(new CustomEvent("mailerlite:failed"));
+          }
+        };
         l.src = u;
         n = d.getElementsByTagName(e)[0];
         n.parentNode.insertBefore(l, n);
