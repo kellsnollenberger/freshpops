@@ -7,14 +7,13 @@ description: "A night at Fresh Pops before construction began, with a piano send
 
 Before construction starts, we opened the doors.
 
-For one night, the space stayed exactly as we found it - no walls moved, no floors touched, no plans imposed. Just people, a piano that had been sitting there for years, and a room full of curiosity.
+For one night, the space stayed exactly as we found it - no walls moved, no floors touched, no plans imposed. Just people, and a piano that had been sitting there for years.
 
-A lot more people showed up than we expected.
+The room filled quickly.
 
 <div class="update-photo-lead">
   <figure>
     <img src="/assets/images/updates/piano-funeral/crowd-baby.jpeg" alt="Guests filling the room before construction, including a baby looking straight at the camera." />
-    <figcaption>Before anything changed, the room was already pulling people in.</figcaption>
   </figure>
 </div>
 
@@ -22,15 +21,15 @@ The piano had already lived a full life. We tried to give it away for months. No
 
 A funeral felt more appropriate.
 
-Tamar led a small ritual - part ceremony, part joke, part something else - to clear the room. A way of acknowledging whatever had been there before us and making it clear: we're here to build something new, but not in conflict with what came before.
+Tamar led a short ritual - part serious, part not - to mark the transition.
 
-Then people started playing.
+We sang a little and played music in the space for the first time.
 
-Not a set. Not a performance. Just a steady rotation - piano, bass, drums, whoever felt like stepping in. At times it sounded like a band, at times like a room figuring itself out. Which, in a way, is exactly what it was.
+Not a set. Not a performance. Just music.
 
-It was also the first real chance to hear the room.
+A little free, a little traditional.
 
-Loose, warm, a little unpredictable. Promising.
+Loose, warm, a little unpredictable.
 
 <div class="update-photo-grid update-photo-grid--mosaic">
   <figure class="update-photo-card update-photo-card--feature">
@@ -53,9 +52,9 @@ Loose, warm, a little unpredictable. Promising.
   </figure>
 </div>
 
-People wandered, talked, drank, played, listened. Some took pieces of the space with them - chairs, random objects, whatever was on its way out anyway. The kind of night where nothing is fully organized but everything works.
+People wandered, talked, drank, played, listened.
 
-More than anything, it felt like a beginning.
+Some people took pieces of the space with them - plates, silverware, appliances, whatever was on its way out anyway.
 
 <div class="update-photo-grid update-photo-grid--three">
   <figure class="update-photo-card">
@@ -69,15 +68,20 @@ More than anything, it felt like a beginning.
   </figure>
 </div>
 
-A lot of people who came will be able to say, later on, that they saw it before - before the hallway, before the music room, before it was finished. That matters more than we expected.
+Nothing was organized, but it worked.
+
+A lot of people who came will be able to say they saw it before - before the hallway, before the music room, before it was finished.
+
+My godson was there. One day he can say he was at the first event.
+
+In the end, our friend Matt took the piano and arranged to move it to his space.
 
 We're aiming to open in late summer.
 
 <div class="update-photo-lead">
   <figure>
     <img src="/assets/images/updates/piano-funeral/mirror-selfie.jpeg" alt="Two guests taking a mirror selfie during the Piano Funeral night." />
-    <figcaption>A little evidence that it happened.</figcaption>
   </figure>
 </div>
 
-There's still a lot to build. But now there's already something here.
+There's still a lot to build. But now there's something to build on.
