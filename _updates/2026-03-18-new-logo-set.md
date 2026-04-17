@@ -1,8 +1,8 @@
 ---
 title: "Fresh Pops got a fresh coat of paint"
 date: 2026-03-18
-excerpt: "Fresh Pops got some new looks online, thanks to Stephanie at Natives 1990."
-description: "Fresh Pops update announcing the new logo set by Stephanie at Natives 1990."
+excerpt: "New Fresh Pops logos are live on the site."
+description: "Fresh Pops update on the new logo set by Stephanie at Natives 1990."
 ---
 
 Fresh Pops got a little glow-up.

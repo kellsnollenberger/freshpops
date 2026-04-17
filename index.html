@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Fresh Pops
-description: Fresh Pops is a music-first neighborhood bar coming to Bed-Stuy. We are not open yet. Join the email list for the real opening timeline and first-night updates.
-hide_top_rail: true
+description: Fresh Pops is a music-first neighborhood bar at 564 DeKalb Ave in Bed-Stuy, Brooklyn, built around drinks, food, and live music. We are not open yet. Join the email list for the real opening updates.
 ---
 {% assign updates_sorted = site.updates | sort: 'date' | reverse %}
 {% assign latest_update = updates_sorted | first %}
@@ -56,21 +55,21 @@ hide_top_rail: true
     />
 
     <div class="hero-copy-wrap">
-      <p class="eyebrow">Bed-Stuy, Brooklyn</p>
+      <p class="eyebrow">564 DeKalb Ave, Bed-Stuy, Brooklyn</p>
       <h1 id="home-headline">
-        Fresh Pops is coming to Bed-Stuy.
+        A music-first Bed-Stuy bar.
       </h1>
       <p class="hero-tagline">
         Maybe <span id="newsday-word" class="newsday-word">Tuesday</span> will be your good newsday.
       </p>
       <p class="hero-subhead">
-        Fresh Pops is a music-first neighborhood bar in the works, and the email list is where we share the real opening timeline.
+        Fresh Pops is opening at 564 DeKalb Ave with drinks, food, and live music. We are not open yet. Join the email list for the real opening date, first-night details, and food and drink news.
       </p>
 
       <ul class="proof-cues" aria-label="Fresh Pops highlights">
-        <li>In Bed-Stuy, Brooklyn</li>
-        <li>Listening-room sound focus</li>
-        <li>Planned nightly programming once open</li>
+        <li>Drinks, food, and live music</li>
+        <li>Built for listening</li>
+        <li>Real updates by email</li>
       </ul>
 
       <aside class="opening-guess" aria-label="Best guess opening date">
@@ -108,9 +107,9 @@ hide_top_rail: true
     <div class="signup-panel">
       <div>
         <p class="section-label">Email First</p>
-        <h2 id="signup-heading">Be first through the door.</h2>
+        <h2 id="signup-heading">Get the real opening date in your inbox.</h2>
         <p>
-          We’ll email opening-window changes, first-event announcements, and the exact launch details as soon as they’re real.
+          Email is where we’ll send timing changes, first-night details, and early looks at the drinks, food, and music.
         </p>
       </div>
       <div class="signup-form-wrap" aria-label="Email signup form">
@@ -134,7 +133,7 @@ hide_top_rail: true
   <section class="latest-update container" aria-labelledby="latest-update-heading">
     <div class="latest-update-header">
       <p class="section-label">Progress Log</p>
-      <h2 id="latest-update-heading">Latest update</h2>
+      <h2 id="latest-update-heading">Latest from the build</h2>
     </div>
 
     {% if latest_update %}
@@ -146,12 +145,12 @@ hide_top_rail: true
           <a href="{{ latest_update.url | relative_url }}">{{ latest_update.title }}</a>
         </h3>
         <p>{{ latest_update.excerpt | strip_html | truncate: 240 }}</p>
-        <a class="text-link" href="{{ '/updates/' | relative_url }}">See all updates &rarr;</a>
+        <a class="text-link" href="{{ '/updates/' | relative_url }}">Read all updates &rarr;</a>
       </article>
     {% else %}
       <article class="latest-update-card">
         <h3>First build update is coming soon.</h3>
-        <p>We’ll post timeline changes, build progress, and launch details here.</p>
+        <p>We’ll post timing changes, build progress, and opening details here.</p>
       </article>
     {% endif %}
   </section>
@@ -160,12 +159,13 @@ hide_top_rail: true
     <div class="what-is-grid">
       <div>
         <p class="section-label">What Fresh Pops Is</p>
-        <h2 id="what-is-heading">A neighborhood bar built around music.</h2>
+        <h2 id="what-is-heading">Food, drinks, and music, with the room built for listening.</h2>
       </div>
       <div>
         <p>
-          Great drinks, dialed-in sound, and a neighborhood room built for actually listening.
-          We’re opening soon at 564 DeKalb Ave in Bed-Stuy; opening hours and first-week programming will be posted as they’re finalized.
+          Fresh Pops is a neighborhood bar at 564 DeKalb Ave in Bed-Stuy. The plan is simple:
+          strong drinks, food worth ordering, and music that sounds good in the room.
+          We are not open yet. Hours and first-week programming will go out once they are locked.
         </p>
       </div>
     </div>
