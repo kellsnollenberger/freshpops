@@ -76,7 +76,7 @@ My godson was there. One day he can say he was at the first event.
 
 In the end, our friend Matt took the piano and arranged to move it to his space.
 
-We're aiming to open in late summer.
+We're currently aiming for September or October.
 
 <div class="update-photo-lead">
   <figure>
