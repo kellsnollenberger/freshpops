@@ -307,8 +307,8 @@ main > section:not(.hero)::before {
 .hero h1 {
   margin-top: 0.6rem;
   max-width: 13ch;
-  font-size: clamp(3.3rem, 12vw, 13rem);
-  letter-spacing: -0.045em;
+  font-size: clamp(3.3rem, 9vw, 9.5rem);
+  letter-spacing: 0;
   line-height: 0.88;
   text-wrap: pretty;
 }
@@ -983,7 +983,7 @@ select:focus-visible {
   .hero h1 {
     font-size: clamp(2.45rem, 14.5vw, 5rem);
     max-width: 11.2ch;
-    letter-spacing: -0.032em;
+    letter-spacing: 0;
     line-height: 0.9;
     overflow-wrap: anywhere;
   }
