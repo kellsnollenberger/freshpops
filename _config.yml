@@ -9,8 +9,7 @@ lang: en-US
 timezone: America/New_York
 instagram_url: "https://instagram.com/freshpopsnyc"
 contact_email: "info@freshpops.nyc"
-mailerlite_account: "2108060"
-mailerlite_form_id: "C0eoW1"
+square_signup_url: "https://squareup.com/outreach/viBFAc/subscribe"
 social_image: "/assets/brand/social-card.png"
 logo_path: "/assets/brand/logo-horizontal.svg"
 

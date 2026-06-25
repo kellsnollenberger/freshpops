@@ -84,4 +84,4 @@ If you see a Ruby 2.6/ffi error on macOS, your shell is still using system Ruby.
 - `_data/opening.yml` opening date config
 - `_layouts/` shared templates
 - `assets/css/site.css` styling
-- `assets/js/site.js` small interaction layer (day swap + MailerLite form polish)
+- `assets/js/site.js` small interaction layer (day swap + email signup form polish)

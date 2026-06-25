@@ -536,10 +536,6 @@ main > section:not(.hero)::before {
   display: none !important;
 }
 
-.signup-form-wrap.is-fallback-visible .ml-embedded {
-  display: none;
-}
-
 .signup-fallback {
   display: grid;
   gap: 0.9rem;
@@ -845,13 +841,10 @@ main > section:not(.hero)::before {
   color: var(--text-dim);
 }
 
-/* MailerLite embed cleanup */
-.signup-form-wrap .ml-form-embedWrapper,
-.signup-form-wrap .ml-form-embedBody,
-.signup-form-wrap .ml-form-embedContent,
-.signup-form-wrap .ml-form-formContent,
-.signup-form-wrap .ml-form-successBody,
-.signup-form-wrap .ml-form-align-center {
+/* Email signup embed cleanup */
+.signup-form-embed,
+.signup-form-embed form,
+.signup-form-embed iframe {
   margin: 0 !important;
   max-width: none !important;
   width: 100% !important;
@@ -861,42 +854,32 @@ main > section:not(.hero)::before {
   box-shadow: none !important;
 }
 
-.signup-form-wrap .ml-form-embedBody {
-  padding: 0 !important;
-}
-
-.signup-form-wrap .ml-form-embedContent {
-  display: none !important;
-}
-
-.signup-form-wrap .ml-form-embedContainer,
-.signup-form-wrap .ml-form-horizontalRow,
-.signup-form-wrap .ml-form-formContent {
-  max-width: 100% !important;
-  width: 100% !important;
-}
-
-.signup-form-wrap .ml-form-successBody,
-.signup-form-wrap .ml-form-successBody h4,
-.signup-form-wrap .ml-form-successBody p,
-.signup-form-wrap .ml-form-successBody span,
-.signup-form-wrap .ml-form-successBody div {
+.signup-form-embed,
+.signup-form-embed h1,
+.signup-form-embed h2,
+.signup-form-embed h3,
+.signup-form-embed h4,
+.signup-form-embed p,
+.signup-form-embed span,
+.signup-form-embed div,
+.signup-form-embed label {
   color: var(--text) !important;
 }
 
-.signup-form-wrap .ml-form-fieldRow,
-.signup-form-wrap .ml-form-checkboxRow,
-.signup-form-wrap .ml-form-recaptcha {
+.signup-form-embed > * + *,
+.signup-form-embed form > * + * {
   margin-bottom: 0.78rem !important;
 }
 
 .signup-form-wrap input[type="email"],
 .signup-form-wrap input[type="text"],
 .signup-form-wrap input[type="tel"] {
+  appearance: none;
+  -webkit-appearance: none;
   width: 100%;
   min-height: 62px;
   border: 1px solid rgba(200, 150, 62, 0.34) !important;
-  border-radius: 0;
+  border-radius: 0 !important;
   background: #0f0e0d !important;
   color: var(--text) !important;
   padding: 1rem 1rem;
@@ -907,17 +890,29 @@ main > section:not(.hero)::before {
   caret-color: var(--text) !important;
 }
 
+.signup-form-wrap input[type="email"]:-webkit-autofill,
+.signup-form-wrap input[type="email"]:-webkit-autofill:hover,
+.signup-form-wrap input[type="email"]:-webkit-autofill:focus,
+.signup-form-wrap input[type="text"]:-webkit-autofill,
+.signup-form-wrap input[type="text"]:-webkit-autofill:hover,
+.signup-form-wrap input[type="text"]:-webkit-autofill:focus,
+.signup-form-wrap input[type="tel"]:-webkit-autofill,
+.signup-form-wrap input[type="tel"]:-webkit-autofill:hover,
+.signup-form-wrap input[type="tel"]:-webkit-autofill:focus {
+  border-color: rgba(200, 150, 62, 0.72) !important;
+  box-shadow: 0 0 0 1000px #0f0e0d inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #0f0e0d inset !important;
+  -webkit-text-fill-color: var(--text) !important;
+  caret-color: var(--text) !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 .signup-form-wrap input::placeholder {
   color: rgba(214, 204, 184, 0.72) !important;
   opacity: 1;
 }
 
-.signup-form-wrap .ml-form-embedSubmit {
-  margin-top: 0.22rem !important;
-  margin-bottom: 0 !important;
-}
-
-.signup-form-wrap .ml-form-embedSubmit button,
+.signup-form-embed button,
 .signup-form-wrap input[type="submit"] {
   width: 100% !important;
   min-height: 64px;
@@ -933,7 +928,7 @@ main > section:not(.hero)::before {
   box-shadow: none !important;
 }
 
-.signup-form-wrap .ml-form-embedSubmit button:hover,
+.signup-form-embed button:hover,
 .signup-form-wrap input[type="submit"]:hover {
   background: rgba(200, 150, 62, 0.14) !important;
   color: var(--text) !important;

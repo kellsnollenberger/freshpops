@@ -43,29 +43,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
 
-    <script>
-      (function (w, d, e, u, f, l, n) {
-        w[f] =
-          w[f] ||
-          function () {
-            (w[f].q = w[f].q || []).push(arguments);
-          };
-        l = d.createElement(e);
-        l.async = 1;
-        l.onerror = function () {
-          w.__freshPopsMailerLiteFailed = true;
-          d.documentElement.classList.add("mailerlite-failed");
-          if (w.CustomEvent) {
-            w.dispatchEvent(new CustomEvent("mailerlite:failed"));
-          }
-        };
-        l.src = u;
-        n = d.getElementsByTagName(e)[0];
-        n.parentNode.insertBefore(l, n);
-      })(window, document, "script", "https://assets.mailerlite.com/js/universal.js", "ml");
-      ml("account", "{{ site.mailerlite_account }}");
-    </script>
-
     {% if page.noindex %}
       <meta name="robots" content="noindex,nofollow" />
     {% endif %}
@@ -112,7 +89,7 @@
       </div>
 
       <p class="container footer-note">
-        Newsletter signup is powered by MailerLite. We only use your email for Fresh Pops updates. Unsubscribe anytime.
+        We only use your email for Fresh Pops updates. Unsubscribe anytime.
       </p>
     </footer>
 
