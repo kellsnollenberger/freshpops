@@ -1,6 +1,6 @@
 ---
 title: "Little by Little"
-date: 2026-06-25
+date: 2026-06-24
 excerpt: "The old gate is gone, the new one is in, and progress keeps adding up."
 description: "A Fresh Pops build update about replacing the old gate, slow construction progress, and moving closer to an opening date."
 ---
