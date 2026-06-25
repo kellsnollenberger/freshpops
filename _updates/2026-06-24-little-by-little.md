@@ -1,7 +1,7 @@
 ---
 title: "Little by Little"
 date: 2026-06-24
-excerpt: "A small project turned into a long day, but the space keeps moving forward."
+excerpt: "The old gate finally came down."
 description: "A Fresh Pops build update about replacing the old gate, slow construction progress, and moving closer to an opening date."
 ---
 
