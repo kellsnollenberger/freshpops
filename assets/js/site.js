@@ -1,7 +1,7 @@
 (function () {
   function signupHasLiveForm(root) {
     return !!root.querySelector(
-      ".signup-form-embed iframe, .signup-form-embed form, .signup-form-embed input[type='email'], .signup-form-embed input[type='submit'], .signup-form-embed button"
+      ".ml-form-embedWrapper, .ml-form-successBody, .ml-form-embedSubmit button, input[type='email'], input[type='submit']"
     );
   }
 
@@ -15,7 +15,7 @@
     fallback.hidden = !shouldShow;
   }
 
-  function restyleSignupForm() {
+  function restyleMailerLiteForm() {
     var root = document.querySelector("#signup");
     if (!root) return;
 
@@ -35,14 +35,18 @@
       input.setAttribute("autocomplete", "email");
     });
 
-    var submitBtn = root.querySelector(".signup-form-embed button, .signup-form-embed input[type='submit']");
+    var submitBtn = root.querySelector(".ml-form-embedSubmit button, input[type='submit']");
     if (submitBtn && !submitBtn.getAttribute("aria-label")) {
       submitBtn.setAttribute("aria-label", "Join Fresh Pops email updates");
     }
+
+    if (!hasLiveForm && window.__freshPopsMailerLiteFailed) {
+      setSignupFallbackVisibility(root, true);
+    }
   }
 
-  setTimeout(restyleSignupForm, 350);
-  setTimeout(restyleSignupForm, 1200);
+  setTimeout(restyleMailerLiteForm, 350);
+  setTimeout(restyleMailerLiteForm, 1200);
   setTimeout(function () {
     var root = document.querySelector("#signup");
     if (!root || signupHasLiveForm(root)) return;
@@ -51,9 +55,15 @@
 
   var signupRoot = document.querySelector("#signup");
   if (signupRoot && window.MutationObserver) {
-    var observer = new MutationObserver(restyleSignupForm);
+    var observer = new MutationObserver(restyleMailerLiteForm);
     observer.observe(signupRoot, { childList: true, subtree: true });
   }
+
+  window.addEventListener("mailerlite:failed", function () {
+    var root = document.querySelector("#signup");
+    if (!root || signupHasLiveForm(root)) return;
+    setSignupFallbackVisibility(root, true);
+  });
 
   var newsdayWordEl = document.querySelector("#newsday-word");
   if (newsdayWordEl) {
