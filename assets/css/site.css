@@ -500,18 +500,20 @@ main > section:not(.hero)::before {
 }
 
 .signup-panel {
-  padding: clamp(1.2rem, 3.8vw, 2rem);
+  padding: clamp(1.2rem, 3.4vw, 2.4rem);
   display: grid;
-  gap: 1.15rem;
+  gap: clamp(1.4rem, 3vw, 3.2rem);
   border: 1px solid rgba(200, 150, 62, 0.34);
-  background: linear-gradient(165deg, rgba(31, 27, 23, 0.94), rgba(18, 16, 14, 0.98));
+  background:
+    linear-gradient(90deg, rgba(200, 150, 62, 0.06) 0 1px, transparent 1px 100%) 0 0 / 84px 84px,
+    linear-gradient(165deg, rgba(31, 27, 23, 0.94), rgba(18, 16, 14, 0.98));
 }
 
 .signup-panel h2 {
   margin-top: 0.45rem;
   max-width: 14ch;
-  font-size: clamp(2.05rem, 6.2vw, 4.6rem);
-  letter-spacing: -0.03em;
+  font-size: clamp(2.05rem, 5.6vw, 4.3rem);
+  letter-spacing: 0;
 }
 
 .signup-panel p {
@@ -522,9 +524,12 @@ main > section:not(.hero)::before {
 }
 
 .signup-form-wrap {
-  border: 1px solid rgba(200, 150, 62, 0.45);
-  background: rgba(11, 10, 9, 0.95);
-  padding: clamp(0.95rem, 2.4vw, 1.45rem);
+  align-self: center;
+  border: 1px solid rgba(200, 150, 62, 0.52);
+  background:
+    linear-gradient(135deg, rgba(200, 150, 62, 0.1), transparent 28%),
+    rgba(11, 10, 9, 0.88);
+  padding: clamp(1rem, 2.5vw, 1.65rem);
 }
 
 .signup-form-wrap.is-fallback-visible {
@@ -841,7 +846,53 @@ main > section:not(.hero)::before {
   color: var(--text-dim);
 }
 
-/* Email signup embed cleanup */
+/* MailerLite signup embed cleanup */
+.ml-embedded,
+.signup-form-wrap .ml-form-embedContainer,
+.signup-form-wrap .ml-form-embedWrapper,
+.signup-form-wrap .ml-form-embedBody,
+.signup-form-wrap .ml-form-align-center,
+.signup-form-wrap .ml-form-formContent,
+.signup-form-wrap .ml-form-fieldRow,
+.signup-form-wrap .ml-field-group,
+.signup-form-wrap .ml-input-horizontal,
+.signup-form-wrap .ml-form-horizontalRow,
+.signup-form-wrap .ml-form-embedSubmit {
+  margin: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.signup-form-wrap .ml-form-embedWrapper {
+  color: var(--text) !important;
+  padding: 0 !important;
+}
+
+.signup-form-wrap .ml-form-embedBody,
+.signup-form-wrap .ml-form-successBody {
+  padding: 0 !important;
+}
+
+.signup-form-wrap .ml-form-horizontalRow {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 0.34fr);
+  gap: 0.75rem !important;
+  align-items: stretch !important;
+}
+
+.signup-form-wrap .ml-input-horizontal {
+  display: block !important;
+}
+
+.signup-form-wrap .ml-form-embedSubmit {
+  display: block !important;
+}
+
 .signup-form-embed,
 .signup-form-embed form,
 .signup-form-embed iframe {
@@ -877,12 +928,13 @@ main > section:not(.hero)::before {
   appearance: none;
   -webkit-appearance: none;
   width: 100%;
-  min-height: 62px;
-  border: 1px solid rgba(200, 150, 62, 0.34) !important;
+  height: 64px !important;
+  min-height: 64px;
+  border: 1px solid rgba(200, 150, 62, 0.58) !important;
   border-radius: 0 !important;
   background: #0f0e0d !important;
   color: var(--text) !important;
-  padding: 1rem 1rem;
+  padding: 1rem 1.05rem;
   font-family: "Space Mono", "IBM Plex Mono", monospace;
   font-size: 1.08rem;
   box-shadow: none !important;
@@ -913,11 +965,13 @@ main > section:not(.hero)::before {
 }
 
 .signup-form-embed button,
+.signup-form-wrap .ml-form-embedSubmit button,
 .signup-form-wrap input[type="submit"] {
   width: 100% !important;
+  height: 64px !important;
   min-height: 64px;
   border: 1px solid rgba(141, 43, 55, 0.9) !important;
-  background: linear-gradient(90deg, #74232d 0%, #8d2b37 100%) !important;
+  background: linear-gradient(90deg, #8d2b37 0%, #b4322b 100%) !important;
   color: var(--text) !important;
   border-radius: 0;
   text-transform: uppercase;
@@ -929,6 +983,7 @@ main > section:not(.hero)::before {
 }
 
 .signup-form-embed button:hover,
+.signup-form-wrap .ml-form-embedSubmit button:hover,
 .signup-form-wrap input[type="submit"]:hover {
   background: rgba(200, 150, 62, 0.14) !important;
   color: var(--text) !important;
@@ -986,6 +1041,10 @@ select:focus-visible {
   .signup-panel h2 {
     max-width: 100%;
     font-size: clamp(1.9rem, 10vw, 3rem);
+  }
+
+  .signup-form-wrap .ml-form-horizontalRow {
+    grid-template-columns: 1fr;
   }
 
   .hero-actions {
