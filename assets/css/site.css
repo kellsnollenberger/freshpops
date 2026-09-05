@@ -1109,3 +1109,126 @@ select:focus-visible {
     gap: 1.2rem;
   }
 }
+
+/* Hiring pages use the existing Fresh Pops typography and palette. */
+.careers-main {
+  padding: clamp(1.5rem, 4vw, 3rem) 0;
+}
+.careers-main > .container {
+  max-width: 1080px;
+}
+.careers-hero,
+.careers-open,
+.careers-upcoming {
+  padding: 2rem 0;
+}
+.careers-hero h1 {
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  line-height: 1.08;
+  margin: 0.5rem 0 1rem;
+}
+.careers-hero > p:last-child,
+.careers-upcoming > p {
+  max-width: 66ch;
+  color: var(--text-dim);
+}
+.careers-open > h2,
+.careers-upcoming > h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.career-opening {
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+}
+.career-opening > * + * {
+  margin-top: 1rem;
+}
+.career-opening h3 {
+  font-size: clamp(1.65rem, 4vw, 2.8rem);
+  line-height: 1.15;
+}
+.career-opening > p {
+  max-width: 70ch;
+}
+.career-status {
+  color: var(--amber);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.career-meta {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+.career-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+.career-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  border-top: 1px solid var(--line-soft);
+  padding: 1.2rem 0;
+}
+.career-list h3 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  line-height: 1.2;
+}
+.career-list span {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+.careers-main > .job-article {
+  max-width: 900px;
+}
+.job-header {
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line-strong);
+}
+.job-header h1 {
+  font-size: clamp(2.3rem, 6.5vw, 4.8rem);
+  line-height: 1.1;
+  overflow-wrap: break-word;
+  margin: 0.75rem 0 1rem;
+}
+.job-header > * + * {
+  margin-top: 1rem;
+}
+.job-pay {
+  color: var(--amber);
+  font-weight: 700;
+}
+.job-content {
+  max-width: 72ch;
+  line-height: 1.75;
+}
+.job-content > * + * {
+  margin-top: 1rem;
+}
+.job-content h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  scroll-margin-top: 1.5rem;
+}
+.job-content ul {
+  padding-left: 1.4rem;
+}
+.job-content li + li {
+  margin-top: 0.65rem;
+}
+.job-content a,
+.job-back a {
+  overflow-wrap: anywhere;
+}
+.top-rail-nav a[aria-current="page"] {
+  color: var(--amber);
+  border-color: var(--amber);
+}
