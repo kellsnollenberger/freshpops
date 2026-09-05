@@ -5,7 +5,7 @@ excerpt: "A new front door. A little more progress."
 description: "Fresh Pops has new full-opening front doors. Construction keeps moving, with hopes to finish this month and open as soon as next month."
 ---
 
-We’ve got a new front door. And doors that open all the way up for those cool summertime breezes of Anytown, USA. If you know, you know.
+We’ve got a new front door. And doors that open all the way up for those cool summertime breezes of Anytown, USA.
 
 <div class="update-photo-grid">
   <figure class="update-photo-card">
