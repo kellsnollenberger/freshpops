@@ -593,20 +593,23 @@ main > section:not(.hero)::before {
 .latest-update-card h3,
 .update-card h2 {
   margin-top: 0.45rem;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.65rem);
   line-height: 1.12;
   text-wrap: pretty;
 }
 
 .latest-update-card h3 a,
 .update-card h2 a {
+  display: inline-block;
+  max-width: 100%;
+  padding-bottom: 0.13em;
+  border-bottom: 3px solid var(--amber);
   text-decoration: none;
 }
 
 .latest-update-card h3 a:hover,
 .update-card h2 a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
+  border-bottom-color: currentColor;
 }
 
 .latest-update-card p,
