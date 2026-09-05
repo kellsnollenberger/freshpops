@@ -592,7 +592,21 @@ main > section:not(.hero)::before {
 
 .latest-update-card h3,
 .update-card h2 {
-  margin-top: 0.25rem;
+  margin-top: 0.45rem;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.12;
+  text-wrap: pretty;
+}
+
+.latest-update-card h3 a,
+.update-card h2 a {
+  text-decoration: none;
+}
+
+.latest-update-card h3 a:hover,
+.update-card h2 a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 .latest-update-card p,
@@ -661,7 +675,8 @@ main > section:not(.hero)::before {
 }
 
 .update-read-link {
-  margin-top: auto;
+  align-self: flex-start;
+  margin-top: 0.5rem;
 }
 
 .update-main {
