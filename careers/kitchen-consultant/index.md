@@ -51,7 +51,7 @@ The initial engagement covers consulting and opening work. There may be an oppor
 
 ## Location/Timing
 
-Bed-Stuy, Brooklyn. We’re looking to begin in September 2026 or as soon as practical, with work continuing through opening. We’re currently targeting a late-October 2026 opening; that timing remains tentative. The exact schedule and scope can be shaped around the right person, with on-site work for testing, setup, training, and opening support.
+Bed-Stuy, Brooklyn. We’re looking to begin as soon as practical, with work continuing through opening. Our current best guess for opening is {{ site.data.opening.best_guess | downcase }}; that timing remains tentative. The exact schedule and scope can be shaped around the right person, with on-site work for testing, setup, training, and opening support.
 
 ## How to Apply
 
