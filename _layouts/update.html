@@ -10,7 +10,7 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
     </p>
 
-    {% if page.excerpt %}
+    {% if page.excerpt and page.show_excerpt != false %}
       <p class="update-excerpt">{{ page.excerpt }}</p>
     {% endif %}
 
