@@ -3,8 +3,8 @@
   "short_name": "Fresh Pops",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#9e968d",
-  "theme_color": "#9e968d",
+  "background_color": "#101010",
+  "theme_color": "#101010",
   "icons": [
     {
       "src": "assets/brand/icon-192.png",

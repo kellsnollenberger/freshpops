@@ -23,21 +23,21 @@
 }
 
 :root {
-  --bg: #0f0e0d;
-  --bg-soft: #141210;
-  --surface: #1a1714;
-  --surface-2: #1f1a16;
+  --bg: #101010;
+  --bg-soft: #282b2d;
+  --surface: #3d2e29;
+  --surface-2: #42494d;
 
-  --text: #f2ead8;
-  --text-dim: #d6ccb8;
+  --text: #f0e4ca;
+  --text-dim: #dccfb8;
 
-  --crimson: #8d2b37;
-  --crimson-deep: #6f2029;
-  --amber: #c8963e;
+  --crimson: #8a3632;
+  --crimson-deep: #702c29;
+  --bone: #f0e4ca;
 
-  --line-soft: rgba(242, 234, 216, 0.2);
-  --line-strong: rgba(200, 150, 62, 0.42);
-  --line-red: rgba(141, 43, 55, 0.65);
+  --line-soft: rgba(240, 228, 202, 0.2);
+  --line-strong: rgba(240, 228, 202, 0.42);
+  --line-red: rgba(138, 54, 50, 0.65);
   --section-space: clamp(1.9rem, 4.6vw, 3.7rem);
   --stamp-size: 0.74rem;
 }
@@ -58,9 +58,9 @@ body {
   line-height: 1.55;
   color: var(--text);
   background-color: var(--bg);
-  background-image: radial-gradient(circle at 10% 10%, rgba(200, 150, 62, 0.08), transparent 50%),
-    radial-gradient(circle at 80% 0%, rgba(141, 43, 55, 0.08), transparent 50%),
-    linear-gradient(180deg, #12100f 0%, #0f0e0d 100%);
+  background-image: radial-gradient(circle at 10% 10%, rgba(240, 228, 202, 0.08), transparent 50%),
+    radial-gradient(circle at 80% 0%, rgba(138, 54, 50, 0.08), transparent 50%),
+    linear-gradient(180deg, #3d2e29 0%, #101010 100%);
 }
 
 img {
@@ -70,12 +70,12 @@ img {
 
 a {
   color: var(--text);
-  text-decoration-color: var(--amber);
+  text-decoration-color: var(--bone);
   text-underline-offset: 0.16em;
 }
 
 a:hover {
-  color: var(--amber);
+  color: var(--bone);
 }
 
 p {
@@ -122,15 +122,15 @@ h3 {
       90deg,
       transparent,
       transparent 95px,
-      rgba(200, 150, 62, 0.08) 95px,
-      rgba(200, 150, 62, 0.08) 96px
+      rgba(240, 228, 202, 0.08) 95px,
+      rgba(240, 228, 202, 0.08) 96px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 95px,
-      rgba(141, 43, 55, 0.07) 95px,
-      rgba(141, 43, 55, 0.07) 96px
+      rgba(138, 54, 50, 0.07) 95px,
+      rgba(138, 54, 50, 0.07) 96px
     ),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23noise)' opacity='0.2'/%3E%3C/svg%3E");
   background-size: auto, auto, 220px 220px;
@@ -144,8 +144,8 @@ h3 {
   top: 0;
   z-index: 30;
   background: var(--text);
-  border: 1px solid var(--amber);
-  color: #14120f;
+  border: 1px solid var(--bone);
+  color: #101010;
   padding: 0.7rem 0.95rem;
   text-decoration: none;
 }
@@ -158,7 +158,7 @@ h3 {
 .top-rail {
   padding: 1rem 0 0.85rem;
   border-bottom: 2px solid var(--line-red);
-  background: rgba(15, 14, 13, 0.82);
+  background: rgba(16, 16, 16, 0.82);
   backdrop-filter: blur(2px);
 }
 
@@ -177,7 +177,7 @@ h3 {
   letter-spacing: 0.12em;
   font-size: 0.8rem;
   border: 1px solid var(--line-red);
-  color: var(--amber);
+  color: var(--bone);
   padding: 0.48rem 0.72rem;
   min-height: 2.5rem;
 }
@@ -212,7 +212,7 @@ main > section:not(.hero)::before {
   right: 0;
   top: 0;
   height: 2px;
-  background: linear-gradient(90deg, rgba(200, 150, 62, 0.28), rgba(141, 43, 55, 0.6) 52%, rgba(200, 150, 62, 0.28));
+  background: linear-gradient(90deg, rgba(240, 228, 202, 0.28), rgba(138, 54, 50, 0.6) 52%, rgba(240, 228, 202, 0.28));
 }
 
 .hero {
@@ -229,10 +229,10 @@ main > section:not(.hero)::before {
   position: absolute;
   inset: 0 0 0 60%;
   z-index: 0;
-  border-left: 1px solid rgba(200, 150, 62, 0.22);
-  background-image: radial-gradient(circle at 20% 12%, rgba(200, 150, 62, 0.16), transparent 55%),
-    repeating-linear-gradient(0deg, transparent 0 30px, rgba(242, 234, 216, 0.05) 30px 31px),
-    repeating-linear-gradient(90deg, transparent 0 42px, rgba(141, 43, 55, 0.08) 42px 43px);
+  border-left: 1px solid rgba(240, 228, 202, 0.22);
+  background-image: radial-gradient(circle at 20% 12%, rgba(240, 228, 202, 0.16), transparent 55%),
+    repeating-linear-gradient(0deg, transparent 0 30px, rgba(240, 228, 202, 0.05) 30px 31px),
+    repeating-linear-gradient(90deg, transparent 0 42px, rgba(138, 54, 50, 0.08) 42px 43px);
   opacity: 0.45;
 }
 
@@ -257,7 +257,7 @@ main > section:not(.hero)::before {
 .hero-ghost-logo-svg circle,
 .hero-ghost-logo-svg polygon {
   fill: none !important;
-  stroke: rgba(200, 150, 62, 0.18) !important;
+  stroke: rgba(240, 228, 202, 0.18) !important;
   vector-effect: non-scaling-stroke;
 }
 
@@ -289,7 +289,7 @@ main > section:not(.hero)::before {
   font-weight: 700;
   border: 1px dashed var(--line-strong);
   background: transparent;
-  color: var(--amber);
+  color: var(--bone);
   padding: 0.28rem 0.62rem;
   border-radius: 0;
 }
@@ -330,7 +330,7 @@ main > section:not(.hero)::before {
 }
 
 .newsday-word {
-  color: var(--amber);
+  color: var(--bone);
 }
 
 .hero-subhead {
@@ -362,7 +362,7 @@ main > section:not(.hero)::before {
   padding: 0.28rem 0.62rem;
   width: auto;
   color: var(--text);
-  background: rgba(20, 18, 16, 0.65);
+  background: rgba(66, 73, 77, 0.65);
 }
 
 .proof-cues li:nth-child(2n) {
@@ -386,7 +386,7 @@ main > section:not(.hero)::before {
   letter-spacing: 0.1em;
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--amber);
+  color: var(--bone);
 }
 
 .opening-date {
@@ -462,7 +462,7 @@ main > section:not(.hero)::before {
 .btn-secondary {
   background: transparent;
   border-color: var(--line-strong);
-  color: var(--amber);
+  color: var(--bone);
 }
 
 .btn-secondary:hover {
@@ -503,10 +503,10 @@ main > section:not(.hero)::before {
   padding: clamp(1.2rem, 3.4vw, 2.4rem);
   display: grid;
   gap: clamp(1.4rem, 3vw, 3.2rem);
-  border: 1px solid rgba(200, 150, 62, 0.34);
+  border: 1px solid rgba(240, 228, 202, 0.34);
   background:
-    linear-gradient(90deg, rgba(200, 150, 62, 0.06) 0 1px, transparent 1px 100%) 0 0 / 84px 84px,
-    linear-gradient(165deg, rgba(31, 27, 23, 0.94), rgba(18, 16, 14, 0.98));
+    linear-gradient(90deg, rgba(240, 228, 202, 0.06) 0 1px, transparent 1px 100%) 0 0 / 84px 84px,
+    linear-gradient(165deg, rgba(61, 46, 41, 0.94), rgba(61, 46, 41, 0.98));
 }
 
 .signup-panel h2 {
@@ -525,10 +525,10 @@ main > section:not(.hero)::before {
 
 .signup-form-wrap {
   align-self: center;
-  border: 1px solid rgba(200, 150, 62, 0.52);
+  border: 1px solid rgba(240, 228, 202, 0.52);
   background:
-    linear-gradient(135deg, rgba(200, 150, 62, 0.1), transparent 28%),
-    rgba(11, 10, 9, 0.88);
+    linear-gradient(135deg, rgba(240, 228, 202, 0.1), transparent 28%),
+    rgba(16, 16, 16, 0.88);
   padding: clamp(1rem, 2.5vw, 1.65rem);
 }
 
@@ -563,7 +563,7 @@ main > section:not(.hero)::before {
 }
 
 .signup-fallback-note a {
-  color: var(--amber);
+  color: var(--bone);
 }
 
 .signup-fallback-btn {
@@ -630,7 +630,7 @@ main > section:not(.hero)::before {
   letter-spacing: 0.12em;
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--amber);
+  color: var(--bone);
 }
 
 .what-is-grid {
@@ -704,7 +704,7 @@ main > section:not(.hero)::before {
   pointer-events: auto;
   text-decoration: none;
   border: 1px dashed var(--line-strong);
-  color: var(--amber);
+  color: var(--bone);
   padding: 0.28rem 0.46rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -720,7 +720,7 @@ main > section:not(.hero)::before {
   margin-top: 0.65rem;
   padding: 0.75rem;
   border: 1px solid var(--line-strong);
-  border-left: 4px solid var(--amber);
+  border-left: 4px solid var(--bone);
   color: var(--text);
   background: var(--surface-2);
 }
@@ -740,7 +740,7 @@ main > section:not(.hero)::before {
   height: auto;
   margin-top: 0.55rem;
   border: 1px solid var(--line-soft);
-  background: rgba(242, 234, 216, 0.03);
+  background: rgba(240, 228, 202, 0.03);
   padding: 0.9rem;
 }
 
@@ -753,7 +753,7 @@ main > section:not(.hero)::before {
 .update-photo-grid figure {
   margin: 0;
   border: 1px solid var(--line-soft);
-  background: rgba(242, 234, 216, 0.03);
+  background: rgba(240, 228, 202, 0.03);
   padding: 0.6rem;
 }
 
@@ -809,7 +809,7 @@ main > section:not(.hero)::before {
   margin-top: 1.5rem;
   padding: 1.4rem 0 1.2rem;
   border-top: 3px solid var(--line-red);
-  background: #120f0e;
+  background: #101010;
   color: var(--text);
 }
 
@@ -854,8 +854,8 @@ main > section:not(.hero)::before {
 }
 
 .footer-links a:hover {
-  border-color: var(--amber);
-  color: var(--amber);
+  border-color: var(--bone);
+  color: var(--bone);
 }
 
 .footer-note {
@@ -948,9 +948,9 @@ main > section:not(.hero)::before {
   width: 100%;
   height: 64px !important;
   min-height: 64px;
-  border: 1px solid rgba(200, 150, 62, 0.58) !important;
+  border: 1px solid rgba(240, 228, 202, 0.58) !important;
   border-radius: 0 !important;
-  background: #0f0e0d !important;
+  background: #101010 !important;
   color: var(--text) !important;
   padding: 1rem 1.05rem;
   font-family: "Space Mono", "IBM Plex Mono", monospace;
@@ -969,16 +969,16 @@ main > section:not(.hero)::before {
 .signup-form-wrap input[type="tel"]:-webkit-autofill,
 .signup-form-wrap input[type="tel"]:-webkit-autofill:hover,
 .signup-form-wrap input[type="tel"]:-webkit-autofill:focus {
-  border-color: rgba(200, 150, 62, 0.72) !important;
-  box-shadow: 0 0 0 1000px #0f0e0d inset !important;
-  -webkit-box-shadow: 0 0 0 1000px #0f0e0d inset !important;
+  border-color: rgba(240, 228, 202, 0.72) !important;
+  box-shadow: 0 0 0 1000px #101010 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #101010 inset !important;
   -webkit-text-fill-color: var(--text) !important;
   caret-color: var(--text) !important;
   transition: background-color 9999s ease-in-out 0s;
 }
 
 .signup-form-wrap input::placeholder {
-  color: rgba(214, 204, 184, 0.72) !important;
+  color: rgba(240, 228, 202, 0.72) !important;
   opacity: 1;
 }
 
@@ -988,8 +988,8 @@ main > section:not(.hero)::before {
   width: 100% !important;
   height: 64px !important;
   min-height: 64px;
-  border: 1px solid rgba(141, 43, 55, 0.9) !important;
-  background: linear-gradient(90deg, #8d2b37 0%, #b4322b 100%) !important;
+  border: 1px solid rgba(138, 54, 50, 0.9) !important;
+  background: linear-gradient(90deg, #8a3632 0%, #8a3632 100%) !important;
   color: var(--text) !important;
   border-radius: 0;
   text-transform: uppercase;
@@ -1003,9 +1003,9 @@ main > section:not(.hero)::before {
 .signup-form-embed button:hover,
 .signup-form-wrap .ml-form-embedSubmit button:hover,
 .signup-form-wrap input[type="submit"]:hover {
-  background: rgba(200, 150, 62, 0.14) !important;
+  background: rgba(240, 228, 202, 0.14) !important;
   color: var(--text) !important;
-  border-color: rgba(200, 150, 62, 0.75) !important;
+  border-color: rgba(240, 228, 202, 0.75) !important;
 }
 
 /* Focus visibility */
@@ -1014,7 +1014,7 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 3px solid var(--amber);
+  outline: 3px solid var(--bone);
   outline-offset: 2px;
 }
 
