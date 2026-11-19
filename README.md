@@ -7,7 +7,7 @@ Production website for **freshpops.nyc** on GitHub Pages.
 ### Hiring pages
 
 - `careers/index.html` lists open positions and upcoming roles.
-- `careers/kitchen-consultant/index.md` contains the Kitchen Consultant / Opening Lead posting.
+- `careers/kitchen-lead/index.md` contains the Kitchen Lead posting.
 - `_layouts/job.html` provides the shared job-posting layout.
 - Applications go to `info@freshpops.nyc`. Keep upcoming roles marked **Coming soon** until their postings and application details are ready.
 - The shared header and footer link to `/careers/` as **Work With Us**.
