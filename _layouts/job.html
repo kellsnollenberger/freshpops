@@ -1,15 +1,17 @@
 ---
 layout: default
 ---
+{% assign spanish = false %}
+{% if page.lang == "es" %}{% assign spanish = true %}{% endif %}
 <main id="main" class="careers-main">
   <article class="container job-article">
-    <p class="job-back"><a href="{{ '/careers/' | relative_url }}">&larr; All positions</a></p>
+    <p class="job-back"><a href="{{ '/careers/' | relative_url }}">&larr; {% if spanish %}Todas las vacantes{% else %}All positions{% endif %}</a>{% if page.translation_url %} · <a href="{{ page.translation_url | relative_url }}" lang="{{ page.translation_lang }}" hreflang="{{ page.translation_lang }}">{{ page.translation_label }}</a>{% endif %}</p>
     <header class="job-header">
-      <p class="career-status">Now accepting applications</p>
+      <p class="career-status">{% if spanish %}Estamos recibiendo solicitudes{% else %}Now accepting applications{% endif %}</p>
       <h1>{{ page.title }}</h1>
       <p class="career-meta">{{ page.job_meta | escape }}</p>
       <p class="job-pay">{{ page.job_pay | escape }}</p>
-      <a class="btn btn-primary" href="#how-to-apply">How to apply</a>
+      <a class="btn btn-primary" href="#how-to-apply">{% if spanish %}Cómo postularte{% else %}How to apply{% endif %}</a>
     </header>
     <div class="job-content">
       {{ content }}
