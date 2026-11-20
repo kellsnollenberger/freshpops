@@ -18,6 +18,6 @@ You’ll need availability for nights, weekends, holidays, and eventually brunch
 
 ## How to Apply
 
-To apply, email your résumé and a short note about your kitchen experience and availability to [kells@freshpops.nyc](mailto:kells@freshpops.nyc).
+To apply, email your résumé and a short note about your kitchen experience and availability to [hiring@freshpops.nyc](mailto:hiring@freshpops.nyc).
 
-<a class="btn btn-primary" href="mailto:kells@freshpops.nyc?subject=Kitchen%20Lead%20Application">Apply by email</a>
+<a class="btn btn-primary" href="mailto:hiring@freshpops.nyc?subject=Kitchen%20Lead%20Application">Apply by email</a>
