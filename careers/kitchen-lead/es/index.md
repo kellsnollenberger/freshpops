@@ -2,9 +2,8 @@
 layout: job
 lang: es
 title: Responsable de cocina
-description: "Únete al equipo de apertura de Fresh Pops como responsable de cocina a tiempo completo en Bed-Stuy, Brooklyn. $25–$28 por hora."
+description: "Únete al equipo de apertura de Fresh Pops como responsable de cocina a tiempo completo en Bed-Stuy, Brooklyn."
 job_meta: "Bed-Stuy, Brooklyn · Tiempo completo · 40 horas o más por semana"
-job_pay: "$25–$28 por hora"
 translation_url: /careers/kitchen-lead/
 translation_lang: en
 translation_label: Read in English
