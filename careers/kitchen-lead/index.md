@@ -1,9 +1,8 @@
 ---
 layout: job
 title: Kitchen Lead
-description: "Join the Fresh Pops opening team as a full-time kitchen lead in Bed-Stuy, Brooklyn. $25–$28/hour."
+description: "Join the Fresh Pops opening team as a full-time kitchen lead in Bed-Stuy, Brooklyn."
 job_meta: "Bed-Stuy, Brooklyn · Full-time · 40+ hours per week"
-job_pay: "$25–$28/hour"
 translation_url: /careers/kitchen-lead/es/
 translation_lang: es
 translation_label: Leer en español
